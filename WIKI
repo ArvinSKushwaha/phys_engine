@@ -1,0 +1,17 @@
+#PhysEngine Wiki
+
+This document describes the functionality of the `PhysEngine` library and how it works in conjunction with `RendEngine`. `PhysEngine` describes its entities with the `Entity` trait. All entities can have physical properties bound to them, which all implement `PhysicalProperty` trait.
+
+## Constructing Entities
+
+Below is an example of constructing an entity by loading a `.obj` file:
+
+```rust
+let mesh = PolyMesh::load_obj("octahedron.obj"); TODO
+```
+
+As you can see, the usage of entity constructors is fairly simple. The entity constructors are as follows (refer to the method documentation for more information.):
+
+- `PolyMesh::load_obj(file_name: &str)` TODO
+- `PolyMesh::from_vertex_face(vertices: &[Point3], edges: &[(usize, usize)])`
+- `DiscMesh::from_poly_mesh(poly_mesh: &PolyMesh, config: DiscConfig)` TODO
