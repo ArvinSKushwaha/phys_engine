@@ -1,2 +1,2 @@
-pub mod geometry;
 pub mod errors;
+pub mod geometry;
