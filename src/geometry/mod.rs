@@ -8,8 +8,8 @@
 //! See the [`PolyMesh`] and [`TriMesh`] documentation for more information.
 //!
 //! This module also contains a [`Collider`] enum that represents a collection
-//! of collider shapes, among which are [`Sphere`], [`AABB`], [`Cuboid`], and
-//! [`Mesh`].
+//! of collider shapes, among which are [`Collider::Sphere`], [`Collider::AABB`],
+//! [`Collider::Cuboid`], and [`Collider::Mesh`].
 //!
 //! See the [`Collider`] documentation for more information.
 //!
