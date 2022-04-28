@@ -27,6 +27,8 @@
 use crate::errors::PhysEngineErrors;
 use ultraviolet::Vec3;
 
+use super::geometry::Mesh;
+
 /// Computes the normal vector to 3 vertices in counter-clockwise order.
 ///
 /// # Arguments
@@ -139,7 +141,7 @@ impl Polygon {
     ///
     /// # Examples
     /// ```
-    /// use phys_engine::entity::polymesh::Polygon;
+    /// use phys_engine::geometry::polymesh::Polygon;
     /// use ultraviolet::Vec3;
     ///
     /// let vertices = vec![
@@ -222,7 +224,7 @@ impl TriMesh {
     ///
     /// # Examples
     /// ```
-    /// use phys_engine::entity::polymesh::TriMesh;
+    /// use phys_engine::geometry::polymesh::TriMesh;
     /// let mesh = TriMesh::new();
     ///
     /// assert_eq!(mesh.triangles.len(), 0);
@@ -246,7 +248,7 @@ impl TriMesh {
     ///
     /// # Examples
     /// ```
-    /// use phys_engine::entity::polymesh::{TriMesh, Triangle};
+    /// use phys_engine::geometry::polymesh::{TriMesh, Triangle};
     /// use ultraviolet::Vec3;
     ///
     /// let vertices = vec![
@@ -290,7 +292,7 @@ impl TriMesh {
     ///
     /// # Examples
     /// ```
-    /// use phys_engine::entity::polymesh::TriMesh;
+    /// use phys_engine::geometry::polymesh::TriMesh;
     /// use ultraviolet::Vec3;
     ///
     /// let mut mesh = TriMesh::new();
@@ -337,7 +339,7 @@ impl TriMesh {
     ///
     /// # Examples
     /// ```
-    /// use phys_engine::entity::polymesh::TriMesh;
+    /// use phys_engine::geometry::polymesh::TriMesh;
     /// use ultraviolet::Vec3;
     ///
     /// let epsilon = 0.1;
@@ -414,7 +416,7 @@ impl TriMesh {
     ///
     /// # Examples
     /// ```
-    /// use phys_engine::entity::polymesh::{TriMesh, Triangle};
+    /// use phys_engine::geometry::polymesh::{TriMesh, Triangle};
     /// use ultraviolet::Vec3;
     ///
     /// let vertex_list = vec![
@@ -473,7 +475,7 @@ impl TriMesh {
     ///
     /// # Examples
     /// ```
-    /// use phys_engine::entity::polymesh::TriMesh;
+    /// use phys_engine::geometry::polymesh::TriMesh;
     /// use ultraviolet::Vec3;
     ///
     /// let mut mesh = TriMesh::new();
@@ -500,7 +502,7 @@ impl TriMesh {
     ///
     /// # Examples
     /// ```
-    /// use phys_engine::entity::polymesh::{PolyMesh, TriMesh, Triangle};
+    /// use phys_engine::geometry::polymesh::{PolyMesh, TriMesh, Triangle};
     /// use ultraviolet::Vec3;
     ///
     /// let mut mesh = TriMesh::new();
@@ -556,7 +558,7 @@ impl PolyMesh {
     ///
     /// # Examples
     /// ```
-    /// use phys_engine::entity::polymesh::PolyMesh;
+    /// use phys_engine::geometry::polymesh::PolyMesh;
     /// use ultraviolet::Vec3;
     ///
     /// let mesh = PolyMesh::new();
@@ -584,7 +586,7 @@ impl PolyMesh {
     ///
     /// # Examples
     /// ```
-    /// use phys_engine::entity::polymesh::{PolyMesh, Polygon};
+    /// use phys_engine::geometry::polymesh::{PolyMesh, Polygon};
     /// use ultraviolet::Vec3;
     ///
     /// let vertices = [
@@ -641,7 +643,7 @@ impl PolyMesh {
     ///
     /// # Examples
     /// ```
-    /// use phys_engine::entity::polymesh::PolyMesh;
+    /// use phys_engine::geometry::polymesh::PolyMesh;
     /// use ultraviolet::Vec3;
     ///
     /// let mut mesh = PolyMesh::new();
@@ -689,7 +691,7 @@ impl PolyMesh {
     ///
     /// # Examples
     /// ```
-    /// use phys_engine::entity::polymesh::PolyMesh;
+    /// use phys_engine::geometry::polymesh::PolyMesh;
     /// use ultraviolet::Vec3;
     ///
     /// let mut mesh = PolyMesh::new();
@@ -752,7 +754,7 @@ impl PolyMesh {
     ///
     /// # Examples
     /// ```
-    /// use phys_engine::entity::polymesh::{PolyMesh, Polygon};
+    /// use phys_engine::geometry::polymesh::{PolyMesh, Polygon};
     /// use ultraviolet::Vec3;
     ///
     /// let vertices = vec![
@@ -813,7 +815,7 @@ impl PolyMesh {
     ///
     /// # Examples
     /// ```
-    /// use phys_engine::entity::polymesh::PolyMesh;
+    /// use phys_engine::geometry::polymesh::PolyMesh;
     /// use ultraviolet::Vec3;
     ///
     /// let mut mesh = PolyMesh::new();
@@ -839,6 +841,11 @@ impl PolyMesh {
         todo!("PolyMesh::into_tri_mesh");
     }
 }
+
+// Eventually, this code will be uncommented and implemented.
+// TODO: Implement the following traits:
+// impl Mesh for TriMesh { }
+// impl Mesh for PolyMesh { }
 
 #[cfg(test)]
 mod tests {
