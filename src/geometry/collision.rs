@@ -40,7 +40,7 @@ impl Collider {
     /// is equivalent to `b.is_colliding(a)`.
     ///
     /// # Arguments
-    /// * `other` - The other [`&Collider`] to check for collision.
+    /// * `other` - A reference to the other [`Collider`] to check for collision.
     ///
     /// # Returns
     /// `true` if the two geometries are colliding, `false` otherwise.
